@@ -9,9 +9,9 @@ int cmd__parser(aquarium *aq, char *entry_cmd) {
     strcpy(command, entry_cmd);
 
     // Utility Commands
-    if (!strcmp(command, "exit"))
+    if (!strcmp(command, "exit\n"))
         return EXIT;
-    if (!strcmp(command, "help") || !strcmp(command, "usage")) {
+    if (!strcmp(command, "help\n") || !strcmp(command, "usage\n")) {
         cmd__usage();
         return USAGE;
     }
@@ -53,7 +53,7 @@ int cmd__load(aquarium *aq){
 }
 
 int cmd__show(aquarium *aq){
-    char *token = strtok(NULL, " ");
+    char *token = strtok(NULL, "\n");
     if (token != NULL) {
         if (!strcmp(token, "aquarium")) {
             char *status = aquarium__status(aq);
@@ -77,6 +77,7 @@ int cmd__add(aquarium *aq) {
             y = strtok(NULL, "+");
             width = strtok(NULL, "+");
             height = strtok(NULL, "+");
+            type = strtok(NULL, "\n");
             if (id != NULL && x != NULL && y != NULL && width != NULL && height != NULL) {
                 if (atoi(id) != -1 && atoi(x) != -1 && atoi(y) != -1 && atoi(width) != -1 && atoi(height) != -1) {
                     view *v = view__initialize(atoi(id), atoi(x), atoi(y), atoi(height), atoi(width));
@@ -102,14 +103,14 @@ int cmd__delete(aquarium *aq) {
         if (!strcmp(type, "view")) {
             char *id;
             id = strtok(NULL, " N");
-
+            type = strtok(NULL, "\n");
             if (id != NULL) {
                 if (atoi(id) != -1) {
                     ret = aquarium__delete_view(aq, atoi(id));
                 }
             }
             if (ret) {
-                fprintf(stdout, "\t-> View N%s deleted Succesfully \n", id);
+                fprintf(stdout, "\t-> View N%d deleted Succesfully \n", atoi(id));
                 return 1;
             }
         }
@@ -119,27 +120,36 @@ int cmd__delete(aquarium *aq) {
     return 0;
 }
 
-// incomplete
 int cmd__save(aquarium *aq){
-    fprintf(stdout, "\t->I will save :)\n");
-    return 1;
+    char * file = strtok(NULL, "\n");
+    int ret = 0;
+    if (file != NULL)
+        ret = aquarium__save(aq, file);
+
+    if (ret) {
+        fprintf(stdout, "\t-> Aquarium saved succesfully from file %s\n", file);
+        return 1;
+    } 
+    fprintf(stderr, "\t-> wrong or non-existent file given for save command\n");
+    cmd__usage();
+    return 0;
 }
 
 int cmd__exit(aquarium *aq) {
-    if (aq != NULL) {
-        aquarium__free(aq);
-    }
     return EXIT_SUCCESS;
 }
 
-// incomplete
 int cmd__error(char *command) {
     fprintf(stderr, "\t->Uncompatible Command : \"%s\"\n", command);
     return 1;
 }
 
-// incomplete
 int cmd__usage() {
-    fprintf(stdout, "\t->This is a usage menu :)\n");
+    fprintf(stdout, "\t->This is a usage menu :\n    \
+                     \t  load xxxx : load the aquarium xxxx\n   \
+                     \t  show xxxx : show the aquarium xxxx\n   \
+                     \t  save xxxx : save the aquarium xxxx\n   \
+                     \t  add view Nz XxY+BundleX+BundleY : add the view z of size (width = BundleX, height = BundleY) at the coordinates (X,Y)\n   \
+                     \t  del view Nz : delete the view z\n");
     return 1;
 }

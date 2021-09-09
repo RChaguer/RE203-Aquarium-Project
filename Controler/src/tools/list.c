@@ -9,19 +9,23 @@ struct _node {
 };
 
 struct _list {
-    node *head;
-    node *tail;
+    struct _node *head;
+    struct _node *tail;
     void *(*dataCreateAndCopy)(const void *);
     int (*dataCompare)(const void *, const void *);
     void (*dataClear)(void *);
 };
 
-static void * copyAddress(const void *a) {
+void * copyAddress(const void *a) {
     return (void *)a;
 }
 
-static int compareAddress(const void *a1, const void *a2) {
+int compareAddress(const void *a1, const void *a2) {
     return !(a1 == a2);
+}
+
+void freeAddress(void * a) {
+    free(a);
 }
 
 list list__init(void *(*dataCreateAndCopy)(const void *), int (*dataCompare)(const void *, const void *), void (*dataClear)(void *)) {
@@ -43,7 +47,7 @@ list list__init(void *(*dataCreateAndCopy)(const void *), int (*dataCompare)(con
 void list__reset(list linkedlist) {
     while (NULL != linkedlist->head)
     {
-        node *tmp = linkedlist->head;
+        struct _node *tmp = linkedlist->head;
         linkedlist->head = tmp->next;
         linkedlist->dataClear(tmp->data);
 
@@ -65,9 +69,9 @@ int list__is_empty(const list linkedlist)
 
 int list__add(list linkedlist, const void *data)
 {
-    node *iter = linkedlist->head, *tmp;
+    struct _node *iter = linkedlist->head, *tmp;
 
-    if (NULL == (tmp = (node *)malloc(sizeof(node)))) {
+    if (NULL == (tmp = (struct _node *)malloc(sizeof(struct _node)))) {
         perror(NULL);
         return EXIT_FAILURE;
     }
@@ -93,7 +97,7 @@ int list__add(list linkedlist, const void *data)
 
 void list__remove(list linkedlist, const void *data)
 {
-    node *iter = linkedlist->head, *p;
+    struct _node *iter = linkedlist->head, *p;
 
     if (NULL == iter) {
         return;
@@ -138,7 +142,7 @@ void list__remove(list linkedlist, const void *data)
 void list__remove_at(list linkedlist, size_t index) {
     void *p;
     size_t i;
-    node *iter = linkedlist->head;
+    struct _node *iter = linkedlist->head;
 
     if (NULL == iter) {
         return;
@@ -177,7 +181,7 @@ void list__remove_at(list linkedlist, size_t index) {
 int list__insert(list linkedlist, const void *data, size_t index) {
     size_t i;
     void *p;
-    node *iter = linkedlist->head, *tmp = (node *)malloc(sizeof(node));
+    struct _node *iter = linkedlist->head, *tmp = (struct _node *)malloc(sizeof(struct _node));
 
     if (NULL == tmp) {
         perror(NULL);
@@ -225,7 +229,7 @@ int list__insert(list linkedlist, const void *data, size_t index) {
 void * list__get_from(const list linkedlist, size_t index) {
     size_t i = 0;
     void *data = NULL;
-    node *iter = linkedlist->head;
+    struct _node *iter = linkedlist->head;
 
     while (NULL != iter) {
         if (index == i++) {
@@ -241,7 +245,7 @@ void * list__get_from(const list linkedlist, size_t index) {
 
 void * list__get_address_from(const list linkedlist, size_t index) {
     size_t i = 0;
-    node *iter = linkedlist->head;
+    struct _node *iter = linkedlist->head;
 
     while (NULL != iter) {
         if (index == i++) {
@@ -253,7 +257,7 @@ void * list__get_address_from(const list linkedlist, size_t index) {
 }
 
 void * list__find(const list linkedlist, void *data) {
-    node *iter = linkedlist->head;
+    struct _node *iter = linkedlist->head;
 
     while (NULL != iter) {
         if (!linkedlist->dataCompare(data, iter->data)) {
@@ -266,7 +270,7 @@ void * list__find(const list linkedlist, void *data) {
 
 size_t list__size(const list linkedlist) {
     size_t i = 0;
-    node *iter = linkedlist->head;
+    struct _node *iter = linkedlist->head;
 
     while (NULL != iter) {
         i++;
@@ -275,14 +279,20 @@ size_t list__size(const list linkedlist) {
     return i;
 }
 
-node * list__get_head(const list linkedlist) {
-    if (list__is_empty(linkedlist))
-        return NULL;
-    return linkedlist->head;
+node list__first(const list linkedlist) {
+    if (linkedlist != NULL)
+        return linkedlist->head;
+    return NULL;
 }
 
-node * node__get_next(const node * n) {
+node node__next(const node n) {
     if (n != NULL)
         return n->next;
+    return NULL;
+}
+
+void * node__get_data(const node n) {
+    if (n != NULL)
+        return n->data;
     return NULL;
 }

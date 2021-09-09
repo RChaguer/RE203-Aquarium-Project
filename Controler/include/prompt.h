@@ -8,7 +8,7 @@ typedef enum {
 } cmd;
 
 int cmd__parser(aquarium *aq, char *entry_cmd);
-// int cmd__caller(cmd curr_command, char *command);
+
 int cmd__load(aquarium *aq);
 int cmd__show(aquarium *aq);
 int cmd__add(aquarium *aq);
@@ -17,4 +17,5 @@ int cmd__save(aquarium *aq);
 int cmd__error(char *command);
 int cmd__usage();
 int cmd__exit();
+void *terminal_handler(void* args);
 #endif /* _PROMPT_H_ */

@@ -1,6 +1,11 @@
 #ifndef _DIM_COORD_H_
 #define _DIM_COORD_H_
 
+typedef enum  {
+    OUT = 0,
+    IN
+} position;
+
 typedef struct _dimension {
     int width;
     int height;

@@ -1,0 +1,605 @@
+get__random(10) = -5 (value should be < 10) 
+
+	___________ RandomWayPoint mobility test _____________
+Step 0 :
+	destination (x, y)= (0.000000, 0.000000)
+	period is 0
+Step 1 :
+	destination (x, y)= (108.000000, 25.000000)
+	period is 5
+Step 2 :
+	destination (x, y)= (76.000000, 149.000000)
+	period is 5
+Step 3 :
+	destination (x, y)= (95.000000, 202.000000)
+	period is 5
+Step 4 :
+	destination (x, y)= (250.000000, 199.000000)
+	period is 5
+Step 5 :
+	destination (x, y)= (222.000000, 68.000000)
+	period is 5
+Step 6 :
+	destination (x, y)= (385.000000, 56.000000)
+	period is 5
+Step 7 :
+	destination (x, y)= (354.000000, 187.000000)
+	period is 5
+Step 8 :
+	destination (x, y)= (305.000000, 320.000000)
+	period is 5
+Step 9 :
+	destination (x, y)= (145.000000, 298.000000)
+	period is 5
+Step 10 :
+	destination (x, y)= (256.000000, 243.000000)
+	period is 5
+Step 11 :
+	destination (x, y)= (111.000000, 271.000000)
+	period is 5
+Step 12 :
+	destination (x, y)= (251.000000, 223.000000)
+	period is 5
+Step 13 :
+	destination (x, y)= (317.000000, 365.000000)
+	period is 5
+Step 14 :
+	destination (x, y)= (281.000000, 418.000000)
+	period is 5
+Step 15 :
+	destination (x, y)= (286.000000, 504.000000)
+	period is 5
+Step 16 :
+	destination (x, y)= (354.000000, 450.000000)
+	period is 5
+Step 17 :
+	destination (x, y)= (351.000000, 320.000000)
+	period is 5
+Step 18 :
+	destination (x, y)= (255.000000, 221.000000)
+	period is 5
+Step 19 :
+	destination (x, y)= (344.000000, 188.000000)
+	period is 5
+Step 20 :
+	destination (x, y)= (408.000000, 134.000000)
+	period is 5
+Step 21 :
+	destination (x, y)= (463.000000, 246.000000)
+	period is 5
+Step 22 :
+	destination (x, y)= (563.000000, 103.000000)
+	period is 5
+Step 23 :
+	destination (x, y)= (710.000000, 218.000000)
+	period is 5
+Step 24 :
+	destination (x, y)= (585.000000, 91.000000)
+	period is 5
+Step 25 :
+	destination (x, y)= (614.000000, 243.000000)
+	period is 5
+Step 26 :
+	destination (x, y)= (650.000000, 345.000000)
+	period is 5
+Step 27 :
+	destination (x, y)= (664.000000, 406.000000)
+	period is 5
+Step 28 :
+	destination (x, y)= (551.000000, 371.000000)
+	period is 5
+Step 29 :
+	destination (x, y)= (587.000000, 440.000000)
+	period is 5
+Step 30 :
+	destination (x, y)= (490.000000, 314.000000)
+	period is 5
+Step 31 :
+	destination (x, y)= (478.000000, 452.000000)
+	period is 5
+Step 32 :
+	destination (x, y)= (465.000000, 322.000000)
+	period is 5
+Step 33 :
+	destination (x, y)= (306.000000, 431.000000)
+	period is 5
+Step 34 :
+	destination (x, y)= (244.000000, 579.000000)
+	period is 5
+Step 35 :
+	destination (x, y)= (153.000000, 466.000000)
+	period is 5
+Step 36 :
+	destination (x, y)= (80.000000, 315.000000)
+	period is 5
+Step 37 :
+	destination (x, y)= (246.000000, 227.000000)
+	period is 5
+Step 38 :
+	destination (x, y)= (118.000000, 92.000000)
+	period is 5
+Step 39 :
+	destination (x, y)= (133.000000, 5.000000)
+	period is 5
+Step 40 :
+	destination (x, y)= (89.000000, 128.000000)
+	period is 5
+Step 41 :
+	destination (x, y)= (40.000000, 5.000000)
+	period is 5
+Step 42 :
+	destination (x, y)= (176.000000, 155.000000)
+	period is 5
+Step 43 :
+	destination (x, y)= (280.000000, 72.000000)
+	period is 5
+Step 44 :
+	destination (x, y)= (313.000000, 45.000000)
+	period is 5
+Step 45 :
+	destination (x, y)= (465.000000, 148.000000)
+	period is 5
+Step 46 :
+	destination (x, y)= (479.000000, 174.000000)
+	period is 5
+Step 47 :
+	destination (x, y)= (553.000000, 60.000000)
+	period is 5
+Step 48 :
+	destination (x, y)= (615.000000, 193.000000)
+	period is 5
+Step 49 :
+	destination (x, y)= (495.000000, 78.000000)
+	period is 5
+Step 50 :
+	destination (x, y)= (609.000000, 85.000000)
+	period is 5
+Step 51 :
+	destination (x, y)= (548.000000, 11.000000)
+	period is 5
+Step 52 :
+	destination (x, y)= (571.000000, 21.000000)
+	period is 5
+Step 53 :
+	destination (x, y)= (575.000000, 134.000000)
+	period is 5
+Step 54 :
+	destination (x, y)= (648.000000, 281.000000)
+	period is 5
+Step 55 :
+	destination (x, y)= (560.000000, 144.000000)
+	period is 5
+Step 56 :
+	destination (x, y)= (508.000000, 173.000000)
+	period is 5
+Step 57 :
+	destination (x, y)= (414.000000, 152.000000)
+	period is 5
+Step 58 :
+	destination (x, y)= (511.000000, 308.000000)
+	period is 5
+Step 59 :
+	destination (x, y)= (625.000000, 271.000000)
+	period is 5
+Step 60 :
+	destination (x, y)= (660.000000, 423.000000)
+	period is 5
+Step 61 :
+	destination (x, y)= (559.000000, 357.000000)
+	period is 5
+Step 62 :
+	destination (x, y)= (622.000000, 215.000000)
+	period is 5
+Step 63 :
+	destination (x, y)= (660.000000, 225.000000)
+	period is 5
+Step 64 :
+	destination (x, y)= (817.000000, 309.000000)
+	period is 5
+Step 65 :
+	destination (x, y)= (879.000000, 465.000000)
+	period is 5
+Step 66 :
+	destination (x, y)= (856.000000, 351.000000)
+	period is 5
+Step 67 :
+	destination (x, y)= (823.000000, 236.000000)
+	period is 5
+Step 68 :
+	destination (x, y)= (865.000000, 93.000000)
+	period is 5
+Step 69 :
+	destination (x, y)= (701.000000, 93.000000)
+	period is 5
+Step 70 :
+	destination (x, y)= (577.000000, 184.000000)
+	period is 5
+Step 71 :
+	destination (x, y)= (606.000000, 226.000000)
+	period is 5
+Step 72 :
+	destination (x, y)= (762.000000, 380.000000)
+	period is 5
+Step 73 :
+	destination (x, y)= (668.000000, 466.000000)
+	period is 5
+Step 74 :
+	destination (x, y)= (551.000000, 320.000000)
+	period is 5
+Step 75 :
+	destination (x, y)= (434.000000, 456.000000)
+	period is 5
+Step 76 :
+	destination (x, y)= (325.000000, 456.000000)
+	period is 5
+Step 77 :
+	destination (x, y)= (229.000000, 576.000000)
+	period is 5
+Step 78 :
+	destination (x, y)= (306.000000, 684.000000)
+	period is 5
+Step 79 :
+	destination (x, y)= (269.000000, 803.000000)
+	period is 5
+Step 80 :
+	destination (x, y)= (347.000000, 713.000000)
+	period is 5
+Step 81 :
+	destination (x, y)= (456.000000, 601.000000)
+	period is 5
+Step 82 :
+	destination (x, y)= (418.000000, 510.000000)
+	period is 5
+Step 83 :
+	destination (x, y)= (357.000000, 399.000000)
+	period is 5
+Step 84 :
+	destination (x, y)= (289.000000, 387.000000)
+	period is 5
+Step 85 :
+	destination (x, y)= (345.000000, 413.000000)
+	period is 5
+Step 86 :
+	destination (x, y)= (461.000000, 383.000000)
+	period is 5
+Step 87 :
+	destination (x, y)= (415.000000, 540.000000)
+	period is 5
+Step 88 :
+	destination (x, y)= (424.000000, 566.000000)
+	period is 5
+Step 89 :
+	destination (x, y)= (501.000000, 676.000000)
+	period is 5
+Step 90 :
+	destination (x, y)= (599.000000, 521.000000)
+	period is 5
+Step 91 :
+	destination (x, y)= (679.000000, 676.000000)
+	period is 5
+Step 92 :
+	destination (x, y)= (742.000000, 826.000000)
+	period is 5
+Step 93 :
+	destination (x, y)= (902.000000, 799.000000)
+	period is 5
+Step 94 :
+	destination (x, y)= (993.000000, 808.000000)
+	period is 5
+Step 95 :
+	destination (x, y)= (919.000000, 862.000000)
+	period is 5
+Step 96 :
+	destination (x, y)= (834.000000, 730.000000)
+	period is 5
+Step 97 :
+	destination (x, y)= (942.000000, 663.000000)
+	period is 5
+Step 98 :
+	destination (x, y)= (937.000000, 595.000000)
+	period is 5
+Step 99 :
+	destination (x, y)= (925.000000, 741.000000)
+	period is 5
+
+	___________ Horizontal mobility test _____________
+Step 0 :
+	destination (x, y)= (0.000000, 0.000000)
+	period is 0
+Step 1 :
+	destination (x, y)= (100.000000, 0.000000)
+	period is 5
+Step 2 :
+	destination (x, y)= (200.000000, 0.000000)
+	period is 5
+Step 3 :
+	destination (x, y)= (300.000000, 0.000000)
+	period is 5
+Step 4 :
+	destination (x, y)= (400.000000, 0.000000)
+	period is 5
+Step 5 :
+	destination (x, y)= (500.000000, 0.000000)
+	period is 5
+Step 6 :
+	destination (x, y)= (600.000000, 0.000000)
+	period is 5
+Step 7 :
+	destination (x, y)= (700.000000, 0.000000)
+	period is 5
+Step 8 :
+	destination (x, y)= (800.000000, 0.000000)
+	period is 5
+Step 9 :
+	destination (x, y)= (900.000000, 0.000000)
+	period is 5
+Step 10 :
+	destination (x, y)= (800.000000, 0.000000)
+	period is 5
+Step 11 :
+	destination (x, y)= (700.000000, 0.000000)
+	period is 5
+Step 12 :
+	destination (x, y)= (600.000000, 0.000000)
+	period is 5
+Step 13 :
+	destination (x, y)= (500.000000, 0.000000)
+	period is 5
+Step 14 :
+	destination (x, y)= (400.000000, 0.000000)
+	period is 5
+Step 15 :
+	destination (x, y)= (300.000000, 0.000000)
+	period is 5
+Step 16 :
+	destination (x, y)= (200.000000, 0.000000)
+	period is 5
+Step 17 :
+	destination (x, y)= (100.000000, 0.000000)
+	period is 5
+Step 18 :
+	destination (x, y)= (0.000000, 0.000000)
+	period is 5
+Step 19 :
+	destination (x, y)= (100.000000, 0.000000)
+	period is 5
+Step 20 :
+	destination (x, y)= (200.000000, 0.000000)
+	period is 5
+Step 21 :
+	destination (x, y)= (300.000000, 0.000000)
+	period is 5
+Step 22 :
+	destination (x, y)= (400.000000, 0.000000)
+	period is 5
+Step 23 :
+	destination (x, y)= (500.000000, 0.000000)
+	period is 5
+Step 24 :
+	destination (x, y)= (600.000000, 0.000000)
+	period is 5
+Step 25 :
+	destination (x, y)= (700.000000, 0.000000)
+	period is 5
+Step 26 :
+	destination (x, y)= (800.000000, 0.000000)
+	period is 5
+Step 27 :
+	destination (x, y)= (900.000000, 0.000000)
+	period is 5
+Step 28 :
+	destination (x, y)= (800.000000, 0.000000)
+	period is 5
+Step 29 :
+	destination (x, y)= (700.000000, 0.000000)
+	period is 5
+Step 30 :
+	destination (x, y)= (600.000000, 0.000000)
+	period is 5
+Step 31 :
+	destination (x, y)= (500.000000, 0.000000)
+	period is 5
+Step 32 :
+	destination (x, y)= (400.000000, 0.000000)
+	period is 5
+Step 33 :
+	destination (x, y)= (300.000000, 0.000000)
+	period is 5
+Step 34 :
+	destination (x, y)= (200.000000, 0.000000)
+	period is 5
+Step 35 :
+	destination (x, y)= (100.000000, 0.000000)
+	period is 5
+Step 36 :
+	destination (x, y)= (0.000000, 0.000000)
+	period is 5
+Step 37 :
+	destination (x, y)= (100.000000, 0.000000)
+	period is 5
+Step 38 :
+	destination (x, y)= (200.000000, 0.000000)
+	period is 5
+Step 39 :
+	destination (x, y)= (300.000000, 0.000000)
+	period is 5
+Step 40 :
+	destination (x, y)= (400.000000, 0.000000)
+	period is 5
+Step 41 :
+	destination (x, y)= (500.000000, 0.000000)
+	period is 5
+Step 42 :
+	destination (x, y)= (600.000000, 0.000000)
+	period is 5
+Step 43 :
+	destination (x, y)= (700.000000, 0.000000)
+	period is 5
+Step 44 :
+	destination (x, y)= (800.000000, 0.000000)
+	period is 5
+Step 45 :
+	destination (x, y)= (900.000000, 0.000000)
+	period is 5
+Step 46 :
+	destination (x, y)= (800.000000, 0.000000)
+	period is 5
+Step 47 :
+	destination (x, y)= (700.000000, 0.000000)
+	period is 5
+Step 48 :
+	destination (x, y)= (600.000000, 0.000000)
+	period is 5
+Step 49 :
+	destination (x, y)= (500.000000, 0.000000)
+	period is 5
+Step 50 :
+	destination (x, y)= (400.000000, 0.000000)
+	period is 5
+Step 51 :
+	destination (x, y)= (300.000000, 0.000000)
+	period is 5
+Step 52 :
+	destination (x, y)= (200.000000, 0.000000)
+	period is 5
+Step 53 :
+	destination (x, y)= (100.000000, 0.000000)
+	period is 5
+Step 54 :
+	destination (x, y)= (0.000000, 0.000000)
+	period is 5
+Step 55 :
+	destination (x, y)= (100.000000, 0.000000)
+	period is 5
+Step 56 :
+	destination (x, y)= (200.000000, 0.000000)
+	period is 5
+Step 57 :
+	destination (x, y)= (300.000000, 0.000000)
+	period is 5
+Step 58 :
+	destination (x, y)= (400.000000, 0.000000)
+	period is 5
+Step 59 :
+	destination (x, y)= (500.000000, 0.000000)
+	period is 5
+Step 60 :
+	destination (x, y)= (600.000000, 0.000000)
+	period is 5
+Step 61 :
+	destination (x, y)= (700.000000, 0.000000)
+	period is 5
+Step 62 :
+	destination (x, y)= (800.000000, 0.000000)
+	period is 5
+Step 63 :
+	destination (x, y)= (900.000000, 0.000000)
+	period is 5
+Step 64 :
+	destination (x, y)= (800.000000, 0.000000)
+	period is 5
+Step 65 :
+	destination (x, y)= (700.000000, 0.000000)
+	period is 5
+Step 66 :
+	destination (x, y)= (600.000000, 0.000000)
+	period is 5
+Step 67 :
+	destination (x, y)= (500.000000, 0.000000)
+	period is 5
+Step 68 :
+	destination (x, y)= (400.000000, 0.000000)
+	period is 5
+Step 69 :
+	destination (x, y)= (300.000000, 0.000000)
+	period is 5
+Step 70 :
+	destination (x, y)= (200.000000, 0.000000)
+	period is 5
+Step 71 :
+	destination (x, y)= (100.000000, 0.000000)
+	period is 5
+Step 72 :
+	destination (x, y)= (0.000000, 0.000000)
+	period is 5
+Step 73 :
+	destination (x, y)= (100.000000, 0.000000)
+	period is 5
+Step 74 :
+	destination (x, y)= (200.000000, 0.000000)
+	period is 5
+Step 75 :
+	destination (x, y)= (300.000000, 0.000000)
+	period is 5
+Step 76 :
+	destination (x, y)= (400.000000, 0.000000)
+	period is 5
+Step 77 :
+	destination (x, y)= (500.000000, 0.000000)
+	period is 5
+Step 78 :
+	destination (x, y)= (600.000000, 0.000000)
+	period is 5
+Step 79 :
+	destination (x, y)= (700.000000, 0.000000)
+	period is 5
+Step 80 :
+	destination (x, y)= (800.000000, 0.000000)
+	period is 5
+Step 81 :
+	destination (x, y)= (900.000000, 0.000000)
+	period is 5
+Step 82 :
+	destination (x, y)= (800.000000, 0.000000)
+	period is 5
+Step 83 :
+	destination (x, y)= (700.000000, 0.000000)
+	period is 5
+Step 84 :
+	destination (x, y)= (600.000000, 0.000000)
+	period is 5
+Step 85 :
+	destination (x, y)= (500.000000, 0.000000)
+	period is 5
+Step 86 :
+	destination (x, y)= (400.000000, 0.000000)
+	period is 5
+Step 87 :
+	destination (x, y)= (300.000000, 0.000000)
+	period is 5
+Step 88 :
+	destination (x, y)= (200.000000, 0.000000)
+	period is 5
+Step 89 :
+	destination (x, y)= (100.000000, 0.000000)
+	period is 5
+Step 90 :
+	destination (x, y)= (0.000000, 0.000000)
+	period is 5
+Step 91 :
+	destination (x, y)= (100.000000, 0.000000)
+	period is 5
+Step 92 :
+	destination (x, y)= (200.000000, 0.000000)
+	period is 5
+Step 93 :
+	destination (x, y)= (300.000000, 0.000000)
+	period is 5
+Step 94 :
+	destination (x, y)= (400.000000, 0.000000)
+	period is 5
+Step 95 :
+	destination (x, y)= (500.000000, 0.000000)
+	period is 5
+Step 96 :
+	destination (x, y)= (600.000000, 0.000000)
+	period is 5
+Step 97 :
+	destination (x, y)= (700.000000, 0.000000)
+	period is 5
+Step 98 :
+	destination (x, y)= (800.000000, 0.000000)
+	period is 5
+Step 99 :
+	destination (x, y)= (900.000000, 0.000000)
+	period is 5

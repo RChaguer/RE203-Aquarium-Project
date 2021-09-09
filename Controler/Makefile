@@ -1,39 +1,47 @@
-CFLAGS=-Wall -Wextra -Iinclude -fPIC 
-
+CC=gcc -g
+CFLAGS=-Wall -Iinclude -fPIC 
 INC_DIR=include/
+BUILD_DIR=build
+SRC_DIR=src
+TST_DIR=tst
 
-BUILD_DIR=build/
+STRUCTS  = $(wildcard src/structs/*.c)
+TERMINAL = $(wildcard src/terminal/*.c)
+TOOLS    = $(wildcard src/tools/*.c)
+TST      = $(wildcard tst/*.c)
+PROTOCOL = $(wildcard src/protocol/*.c)
+SRC 	 = $(STRUCTS) $(TERMINAL) $(TOOLS) $(PROTOCOL)
+SRC_OBJS = $(addprefix $(BUILD_DIR)/, $(patsubst src/%.c, %.o, $(SRC)))
+TST_OBJS = $(addprefix $(BUILD_DIR)/, $(patsubst %.c, %, $(TST)))
 
-all: install
+.PHONY: install server test
 
-src/%.o: src/%.c
-	gcc $(CFLAGS) -o $(BUILD_DIR)$(patsubst src/%.o,%.o,$@) -c $<
+all: install 
 
+build/tst/%: $(TST_DIR)/%.c $(SRC_OBJS)
+	$(CC) $(CFLAGS) -o $@ $^
+
+build/%.o: $(SRC_DIR)/%.c
+	$(CC) $(CFLAGS) -o $@ -c $< 
+
+install : make_dir $(SRC_OBJS) $(TST_OBJS) $(BUILD_DIR)/server
+
+build/server:	$(SRC_DIR)/server.c $(SRC_OBJS) 
+	$(CC) $(CFLAGS) -o $@ $^ -lpthread
+
+test : $(TST_OBJS)
+	for tst in $(TST_OBJS); do \
+    	valgrind --leak-check=full ./$$tst; \
+	done
+
+run : $(BUILD_DIR)/server
+	./$< 
+
+debug: $(BUILD_DIR)/server
+	valgrind ./$< 
+	
 make_dir: 
-	mkdir -p build build/structs build/tools build/tst build/terminal
+	mkdir -p build build/structs build/tools build/tst build/terminal build/protocol
 
-install : make_dir src/tools/list.o  src/structs/view.o  src/structs/aquarium.o src/terminal/prompt.o
-
-tst : tst/simple_test.c tst/parser_test.c
-	gcc $(CFLAGS) -o $(BUILD_DIR)tst/simple_test $(BUILD_DIR)tools/list.o \
-												 $(BUILD_DIR)structs/view.o \
-												 $(BUILD_DIR)structs/aquarium.o \
-												 tst/simple_test.c
-	valgrind ./$(BUILD_DIR)tst/simple_test
-
-	gcc $(CFLAGS) -o $(BUILD_DIR)tst/parser_test $(BUILD_DIR)tools/list.o \
-												 $(BUILD_DIR)structs/view.o \
-												 $(BUILD_DIR)structs/aquarium.o \
-												 $(BUILD_DIR)terminal/prompt.o \
-												 tst/parser_test.c
-	valgrind ./$(BUILD_DIR)tst/parser_test
-
-run : src/terminal/main_t.c
-	gcc $(CFLAGS) -o $(BUILD_DIR)term $(BUILD_DIR)tools/list.o \
-										  $(BUILD_DIR)structs/view.o \
-										  $(BUILD_DIR)structs/aquarium.o \
-										  $(BUILD_DIR)terminal/prompt.o \
-										  $< -lreadline
-	./$(BUILD_DIR)term
 clean :
-	rm -r $(BUILD_DIR)
+	rm -fr $(BUILD_DIR)
